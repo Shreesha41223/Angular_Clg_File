@@ -1,0 +1,13 @@
+<p>contact works!</p>
+<form (ngSubmit)="onSubmit()" style="border: solid;padding: 20px;">
+    <div>
+        <label for="course">Course:</label>
+        <input type="text" name="courseInput" id="course" [(ngModel)]="course" #courseInput="ngModel" required> <!-- name & #<name> should be same-->
+        <div *ngIf=" submitted && !courseInput.valid">Invalid Course</div>
+        <p>Value of Course: {{course}}</p>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+<button (click)="goToAbout()">Navigate to About</button>

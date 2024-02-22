@@ -1,0 +1,12 @@
+<p>child1 works!</p>
+<input type="text" #data>
+<button (click)="changeValue(data.value)">click</button>
+<h1 [ngClass]="checkValue()?'blue':'red'">my name is shreesha </h1>
+<input type="text" #color>
+<button (click)="CgColor(color.value)">Change color</button>
+<h1 appHighlight [colorValue]="clr">Demo for custom directive</h1>
+<h2>todays date before through pipe-- {{currentdate}}</h2>
+<h2>todays date after through pipe-- {{currentdate|date:'longDate'}}</h2>
+<h2>lower to upper using pipe{{clgname| uppercase}}</h2>
+<h2>currency {{100|currency:'INR'}}</h2>
+<h2>using custom pipe and get multiplied by 10 : {{60|mycustompipe}}</h2>
